@@ -30,6 +30,9 @@ gem 'activeadmin', github: 'activeadmin'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 gem 'devise'
 
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootswatch-rails'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
