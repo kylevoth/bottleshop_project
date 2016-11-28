@@ -4,10 +4,10 @@
 @import "bootstrap-sprockets";
 
 // Import cerulean variables
-@import "bootswatch/simplex/variables";
+@import "bootswatch/darkly/variables";
 
 // Then bootstrap itself
 @import "bootstrap";
 
 // And finally bootswatch style itself
-@import "bootswatch/simplex/bootswatch";
+@import "bootswatch/darkly/bootswatch";
