@@ -1,0 +1,20 @@
+<div class="col-md-4">
+  <div class="well" >
+      <h4>
+        <%= product.name %></h4>
+      </h4>
+      <p>
+        <strong>Description:</strong>
+         <%= product.description %>
+      </p>
+      <p>
+      <strong>Price:</strong> <%= product.price %>
+    </p>
+    <p>
+      <strong>Type:</strong> <%= product.type.name %>
+    </p>
+      <p>
+      <%= image_tag product.image %>
+    </p>
+  </div>
+</div>
