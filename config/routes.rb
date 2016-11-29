@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'products/by_cat/:type_id' => 'products#categorized', as:'categories'
+  resources :products
   root to: 'products#index'
 
   devise_for :admin_users, ActiveAdmin::Devise.config

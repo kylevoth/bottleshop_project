@@ -8,7 +8,7 @@
          <%= product.description %>
       </p>
       <p>
-      <strong>Price:</strong> <%= product.price %>
+      <strong>Price:</strong> <%= number_to_currency product.price %>
     </p>
     <p>
       <strong>Type:</strong> <%= product.type.name %>
@@ -16,5 +16,7 @@
       <p>
       <%= image_tag product.image, :size => "200x300" %>
     </p>
+
+    <p><%= link_to 'View', product_path(product) %></p>
   </div>
 </div>

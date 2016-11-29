@@ -1,0 +1,7 @@
+<h1>By Category: <%= @products.first.type.name %></h1>
+
+<div>
+  <%= paginate @products %>
+</div>
+
+<%= render @products %>

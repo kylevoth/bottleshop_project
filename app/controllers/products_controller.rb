@@ -1,6 +1,14 @@
 class ProductsController < InheritedResources::Base
   def index
-     @products = Product.all.order("name").page(params[:page]).per(3)
+    @products = Product.all.order("name").page(params[:page]).per(3)
+  end
+
+  def show
+    @product = Product.find(params[:id])
+  end
+
+  def categorized
+    @products = Product.where(:type_id => params[:type_id]).page(params[:page]).per(3)
   end
 
 
