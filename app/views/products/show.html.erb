@@ -1,28 +1,37 @@
-<div class="col-md-12">
+<div class="col-md-8">
   <div class="well" >
-    <p>
-      <strong>Name:</strong>
-      <%= @product.name %>
-    </p>
+    <table>
+    <thead>
+    <tr>
+      <th>
+        <p>
+          <strong>Name:</strong>
+          <%= @product.name %>
+        </p>
 
-    <p>
-      <strong>Description:</strong>
-      <%= @product.description %>
-    </p>
+        <p>
+          <strong>Description:</strong>
+          <%= @product.description %>
+        </p>
 
-    <p>
-      <strong>Price:</strong>
-      <%= number_to_currency @product.price %>
-    </p>
+        <p>
+          <strong>Price:</strong>
+          <%= number_to_currency @product.price %>
+        </p>
 
-    <p>
-      <strong>Type:</strong>
-      <%= @product.type.name %>
-    </p>
-
-    <p>
-      <%= image_tag @product.image, :size => '900x600' %>
-    </p>
+        <p>
+          <strong>Type:</strong>
+          <%= @product.type.name %>
+        </p>
+      </th>
+      <th>
+        <p id="img">
+          <%= image_tag @product.image, :size => '200x250' %>
+        </p>
+      </th>
+    </tr>
+  </thead>
+</table>
     <p><%= link_to 'Back', products_path %></p>
   </div>
 </div>
