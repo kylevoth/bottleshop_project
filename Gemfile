@@ -34,6 +34,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'bootswatch-rails'
 
 gem 'carrierwave'
+gem 'mini_magick'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
