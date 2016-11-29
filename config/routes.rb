@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :products
   root to: 'products#index'
 
   devise_for :admin_users, ActiveAdmin::Devise.config

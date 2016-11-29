@@ -36,6 +36,8 @@ gem 'bootswatch-rails'
 gem 'carrierwave'
 gem 'mini_magick'
 
+gem 'kaminari'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
