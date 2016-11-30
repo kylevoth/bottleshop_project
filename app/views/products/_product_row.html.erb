@@ -2,11 +2,12 @@
 
   <div class="row">
     <div class="col-xs-5">
-      <h3><%= product.name %></small></h3>
+      <h3><%= product.name %></h3>
       <p><%= image_tag product.image, size:'200x300' %></p>
       <p><%= link_to 'View', showproduct_path(product) %></p>
     </div>
-    <div class="col-xs-4" id="desc">
+    <div class="col-xs-4">
+    <br><br><br><br>
       <p><%= product.description %></p>
     </div>
     <div class="col-xs-3">

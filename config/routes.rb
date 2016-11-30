@@ -6,10 +6,8 @@ Rails.application.routes.draw do
   #get 'order_items/destroy'
 
   #get 'carts/show'
-
-  get 'products/:id' => 'products#show', as: 'showproduct'
-
   get 'products/srch' => 'products#search'
+  get 'products/:id' => 'products#show', as: 'showproduct'
 
   get 'products/by_cat/:type_id' => 'products#categorized', as:'categories'
   resources :products, only: [:index]

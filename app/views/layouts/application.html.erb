@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Wonderful Wally's Bottleshop</title>
+    <meta charset="utf-8">
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -36,10 +37,10 @@
             <li class="divider"></li>
             <li><%= link_to 'Beer', categories_path(1) %></li>
           </ul>
-        </li>
       </ul>
+
       <ul class="nav navbar-right">
-          <li class="cart-text"><%= render 'layouts/cart_text' %></h1>
+          <li class="cart-text"><%= render 'layouts/cart_text' %></li>
       </ul>
       <form class="navbar-form navbar-right" role="search" action="/products/srch/" method="get">
         <div class="form-group">
@@ -51,6 +52,5 @@
   </div>
 </nav>
     <%= yield %>
-  </div>
   </body>
 </html>
