@@ -1,0 +1,2 @@
+module AboutControllerHelper
+end
