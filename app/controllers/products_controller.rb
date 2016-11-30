@@ -11,6 +11,16 @@ class ProductsController < InheritedResources::Base
     @products = Product.where(:type_id => params[:type_id]).page(params[:page]).per(3)
   end
 
+  def search
+   if params[:search]
+     value = params[:search]
+     @products = Product.where('name LIKE "%' + value + '%"').order("created_at DESC")
+
+   else
+     @products = Product.order("name").page(params[:page]).per(6)
+   end
+end
+
 
   private
 
