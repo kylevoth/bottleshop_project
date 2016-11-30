@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Our Contact Information:</h1>
+
+<div class="col-md-4">
+  <div class="well" >
+      <p>
+        <%= @contact.address %>
+      </p>
+      <p>
+      <%= @contact.city %>, <%= @contact.province.name %>
+    </p>
+    <p>
+      <strong>Phone:</strong> <%= @contact.phone %>
+    </p>
+    <p>
+      <strong>Email:</strong> <%= @contact.email %>
+    </p>
+
+  </div>
+</div>

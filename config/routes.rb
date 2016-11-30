@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :contacts
   get 'about' => 'about_controller#index', as: 'about'
 
   get 'products/by_cat/:type_id' => 'products#categorized', as:'categories'
