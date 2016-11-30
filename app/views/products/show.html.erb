@@ -1,37 +1,6 @@
-<div class="col-md-8">
-  <div class="well" >
-    <table>
-    <thead>
-    <tr>
-      <th>
-        <p>
-          <strong>Name:</strong>
-          <%= @product.name %>
-        </p>
-
-        <p>
-          <strong>Description:</strong>
-          <%= @product.description %>
-        </p>
-
-        <p>
-          <strong>Price:</strong>
-          <%= number_to_currency @product.price %>
-        </p>
-
-        <p>
-          <strong>Type:</strong>
-          <%= @product.type.name %>
-        </p>
-      </th>
-      <th>
-        <p id="img">
-          <%= image_tag @product.image, :size => '200x250' %>
-        </p>
-      </th>
-    </tr>
-  </thead>
-</table>
+<div class="row">
+  <div class="col-xs-6 col-xs-offset-3">
+      <%= render "product_row", product: @product, order_item: @order_item %>
     <p><%= link_to 'Back', products_path %></p>
   </div>
 </div>

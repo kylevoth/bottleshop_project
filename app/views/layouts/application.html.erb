@@ -4,8 +4,8 @@
     <title>Wonderful Wally's Bottleshop</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   </head>
 
   <body>
@@ -38,6 +38,9 @@
           </ul>
         </li>
       </ul>
+      <ul class="nav navbar-right">
+          <li class="cart-text"><%= render 'layouts/cart_text' %></h1>
+      </ul>
       <form class="navbar-form navbar-right" role="search" action="/products/srch/" method="get">
         <div class="form-group">
           <input type="text" class="form-control" name="search" placeholder="Enter search term here" value="">
@@ -47,8 +50,6 @@
     </div>
   </div>
 </nav>
-
-    <div class="container">
     <%= yield %>
   </div>
   </body>

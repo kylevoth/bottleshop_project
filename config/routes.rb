@@ -1,12 +1,24 @@
 Rails.application.routes.draw do
-  resources :contacts
-  get 'about' => 'about_controller#index', as: 'about'
+  #get 'order_items/create'
+
+  #get 'order_items/update'
+
+  #get 'order_items/destroy'
+
+  #get 'carts/show'
+
+  get 'products/:id' => 'products#show', as: 'showproduct'
 
   get 'products/srch' => 'products#search'
 
   get 'products/by_cat/:type_id' => 'products#categorized', as:'categories'
-  resources :products
+  resources :products, only: [:index]
+  resource :cart, only: [:show]
+  resources :order_items, only: [:create, :update, :destroy]
   root to: 'products#index'
+
+  resources :contacts
+  get 'about' => 'about_controller#index', as: 'about'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
