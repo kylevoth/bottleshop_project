@@ -1,6 +1,6 @@
 class ChargesController < ApplicationController
   def new
-    @amount = 500
+    @amount = session[:grand_total]
     @description = 'Purchase of all cart items.'
   end
 
