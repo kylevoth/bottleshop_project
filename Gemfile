@@ -38,6 +38,8 @@ gem 'mini_magick'
 
 gem 'kaminari'
 
+gem 'stripe'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
