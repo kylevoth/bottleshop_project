@@ -19,6 +19,7 @@ class ProductsController < InheritedResources::Base
    if params[:search]
      value = params[:search]
      @products = Product.where('name LIKE "%' + value + '%"').order("created_at DESC")
+     @products = Product.where('description LIKE "%' + value + '%"').order("created_at DESC")
 
    else
      @products = Product.order("name").page(params[:page]).per(6)
